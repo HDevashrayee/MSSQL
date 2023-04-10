@@ -1,32 +1,35 @@
---Alter column
-alter table Citylist alter column statecode nvarchar(50) null;
+--Create database DevWorkDB
+Use DevWorkDB
 
---Drop index
-Drop Index IX_CityList_StateCode on Citylist
+----Alter column
+--alter table Citylist alter column statecode nvarchar(50) null;
 
---Create Index
-Create Index IX_CityList_StateCode on Citylist (statecode)
+----Drop index
+--Drop Index IX_CityList_StateCode on Citylist
 
---Drop FK
-Alter table citylist drop constraint FK_CityList_StateList_StateCode
+----Create Index
+--Create Index IX_CityList_StateCode on Citylist (statecode)
 
---Add FK
+----Drop FK
+--Alter table citylist drop constraint FK_CityList_StateList_StateCode
 
-Alter table citylist add constraint FK_CityList_StateList_StateCode foreign key (StateCode) references StateList(StateCode)
+----Add FK
 
---IX_CityList_StateCode
+--Alter table citylist add constraint FK_CityList_StateList_StateCode foreign key (StateCode) references StateList(StateCode)
+
+----IX_CityList_StateCode
 
 
 
--- Drop Fk
+---- Drop Fk
 
---FK_CityList_CountryList_CountryCode
+----FK_CityList_CountryList_CountryCode
 
---Create database Development
+----Create database Development
 
-Use Development
+--Use Development
 
-create table HumanResources(
-FirstName varchar(50),
-LastName varchar(50),
-Department varchar(50))
+--create table HumanResources(
+--FirstName varchar(50),
+--LastName varchar(50),
+--Department varchar(50))
